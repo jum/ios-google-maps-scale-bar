@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A322" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScaleBarView" customModule="Mapa_Turystyczna" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScaleBarView" customModule="TravelNotes" customModuleProvider="target">
             <connections>
                 <outlet property="distanceLabel" destination="oBa-Z0-Pfg" id="Mmz-qU-CPr"/>
                 <outlet property="scaleBarConstant" destination="U4y-Wi-s52" id="ehQ-cz-R7w"/>
@@ -17,14 +21,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8w-Df-nSs">
+                    <rect key="frame" x="0.0" y="30" width="200" height="10"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lDw-zF-6f2">
+                            <rect key="frame" x="0.0" y="1" width="3" height="9"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="3" id="cbL-1F-H94"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsR-0k-SHT">
+                            <rect key="frame" x="1" y="2" width="1" height="7"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="J5E-ka-hmB"/>
@@ -42,12 +49,14 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0c-Zo-5jZ">
+                            <rect key="frame" x="2" y="7" width="198" height="3"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="3" id="XyA-oe-zPS"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zl-wB-lmG">
+                            <rect key="frame" x="2" y="8" width="197" height="1"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="dhB-GG-SF1"/>
@@ -84,6 +93,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBa-Z0-Pfg">
+                    <rect key="frame" x="153.5" y="21" width="41.5" height="14.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -106,6 +116,7 @@
                 <constraint firstAttribute="bottom" secondItem="oBa-Z0-Pfg" secondAttribute="bottom" constant="4.5" id="WwL-rZ-S2q"/>
                 <constraint firstAttribute="bottom" secondItem="F8w-Df-nSs" secondAttribute="bottom" id="ftC-E1-IeJ"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="64" y="-88"/>
         </view>
