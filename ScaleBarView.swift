@@ -8,7 +8,7 @@
 
 import UIKit
 import GoogleMaps
-import Darwin
+import MapKit
 
 @IBDesignable
 class ScaleBarView: UIView {
@@ -18,6 +18,7 @@ class ScaleBarView: UIView {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var leftLine: UIView!
     @IBOutlet weak var bottomLine: UIView!
+    var distanceFormatter = MKDistanceFormatter()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -83,11 +84,7 @@ class ScaleBarView: UIView {
     
 
     private func formatDistance(distance: Int) -> String {
-        if distance < 1000 {
-            return String(format: "%d", distance)
-        } else {
-            return String(format: "%d km", distance/1000)
-        }
+        return distanceFormatter.string(fromDistance: CLLocationDistance(distance))
     }
 }
 
